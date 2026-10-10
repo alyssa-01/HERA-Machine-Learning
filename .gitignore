@@ -1,0 +1,24 @@
+# Local data and generated model outputs
+/data/
+/raw/
+/clean/
+/results/
+/models/
+/outputs/
+*.parquet
+*.feather
+*.zip
+
+# Local Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example

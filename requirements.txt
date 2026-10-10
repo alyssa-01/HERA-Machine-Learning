@@ -1,0 +1,8 @@
+# Initial dependencies; pin versions once the team validates the environment.
+jupyterlab
+pandas
+pyarrow
+numpy
+matplotlib
+scikit-learn
+pygam
