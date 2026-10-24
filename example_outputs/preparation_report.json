@@ -1,0 +1,72 @@
+{
+  "status": "provisional; no clock synchronization or model fit performed",
+  "config": {
+    "flight_id": "2025-06-01",
+    "detector_id": "top",
+    "detector_file": "raw/2025-06-01/RawData/Bravo CW Top.txt",
+    "logger_file": "raw/2025-06-01/RawData/Bravo CW Datalogger Coincident.csv",
+    "bin_seconds": 10,
+    "logger_rollover_seconds_candidate": 4294.967296,
+    "pressure_spike_window_seconds": 10,
+    "pressure_spike_absolute_pa": 1000,
+    "pressure_spike_fraction": 0.05,
+    "phase_boundaries_detector_seconds_provisional": [
+      3210,
+      9300,
+      11190
+    ],
+    "phase_boundaries_verified": false,
+    "deadtime_semantics_verified": false,
+    "pressure_calibration_verified": false
+  },
+  "source_sha256": {
+    "detector": "47fa9d985061388c4f2c22f3de21f31539886e975d44a53cb2fd2c2e2cbab1f1",
+    "logger": "5988894780a52adbada6c4f74da33c975bf6e338f79257212be42bd58aa07aa0"
+  },
+  "source_events": 232931,
+  "binned_events": 232887,
+  "edge_events_before": 42,
+  "edge_events_after": 2,
+  "coincident_events": 54390,
+  "pressure_flagged_event_rows": 123,
+  "bins": 1919,
+  "maximum_detector_interevent_gap_s": 7.578301999999894,
+  "logger_rollover_candidates": [
+    {
+      "source_record": 33991,
+      "before_timer_s": 4294.899414,
+      "after_timer_s": 0.134267,
+      "candidate_gap_s": 0.20214899999973568
+    },
+    {
+      "source_record": 155369,
+      "before_timer_s": 4294.946767,
+      "after_timer_s": 0.040994,
+      "candidate_gap_s": 0.06152300000030664
+    },
+    {
+      "source_record": 218891,
+      "before_timer_s": 4294.95994,
+      "after_timer_s": 0.02487,
+      "candidate_gap_s": 0.032226000001173816
+    },
+    {
+      "source_record": 247599,
+      "before_timer_s": 4294.661589,
+      "after_timer_s": 0.560504,
+      "candidate_gap_s": 0.8662110000004759
+    }
+  ],
+  "logger_candidate_clock_increasing": true,
+  "minimum_candidate_live_time_s": 9.906540553987512,
+  "clean_directory": "/workspace/scratch/a152d492e111/outputs/june1_profile/clean/2025-06-01/20261024T231130166254Z",
+  "limitations": [
+    "Ground/flight phase boundaries are provisional pressure-based choices.",
+    "Pressure spike rule is diagnostic; sensor accuracy/range is unverified.",
+    "Live time assumes cumulative seconds and interpolates bin boundaries.",
+    "Quiet intervals do not prove continuous acquisition; pauses need records.",
+    "Coincident counts are a subset of all counts, not independent samples.",
+    "Logger candidate clock is not aligned to detector or UTC.",
+    "All bins remain training_ready=False until scientific review."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "flight_id": "2025-06-01",
+  "detector_id": "top",
+  "detector_file": "raw/2025-06-01/RawData/Bravo CW Top.txt",
+  "logger_file": "raw/2025-06-01/RawData/Bravo CW Datalogger Coincident.csv",
+  "bin_seconds": 10,
+  "logger_rollover_seconds_candidate": 4294.967296,
+  "pressure_spike_window_seconds": 10,
+  "pressure_spike_absolute_pa": 1000,
+  "pressure_spike_fraction": 0.05,
+  "phase_boundaries_detector_seconds_provisional": [3210, 9300, 11190],
+  "phase_boundaries_verified": false,
+  "deadtime_semantics_verified": false,
+  "pressure_calibration_verified": false
+}
