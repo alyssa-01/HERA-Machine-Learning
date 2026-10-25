@@ -1,0 +1,16 @@
+{
+  "flight_id": "2025-06-01",
+  "detector_id": "bottom",
+  "detector_file": "raw/2025-06-01/RawData/Bravo CW Bottom.txt",
+  "logger_file": "raw/2025-06-01/RawData/Bravo CW Datalogger Coincident.csv",
+  "bin_seconds": 10,
+  "logger_rollover_seconds_candidate": 4294.967296,
+  "pressure_spike_window_seconds": 10,
+  "pressure_spike_absolute_pa": 1000,
+  "pressure_spike_fraction": 0.05,
+  "phase_boundaries_detector_seconds_provisional": [3210, 9300, 11190],
+  "phase_boundaries_verified": false,
+  "deadtime_semantics_verified": false,
+  "pressure_calibration_verified": false,
+  "phase_review_note": "Reviewed on the bottom detector's own pressure trace: sustained pressure fall near 3210 s, minimum near 9299 s, return to a ground plateau near 11190 s. These rounded boundaries happen to match the top choices; no cross-device clock synchronization is claimed."
+}

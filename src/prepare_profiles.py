@@ -1,4 +1,4 @@
-"""June 1 top-detector profile preparation; original inputs are read-only."""
+"""Prepare a configured detector profile; original inputs are read-only."""
 import argparse
 import hashlib
 import json
@@ -108,7 +108,7 @@ def prepare(root, config, input_dir=None):
             "training_ready": False,
         })
     bins = pd.DataFrame(rows)
-    bins.to_csv(clean / "top_bins_10s.csv", index=False)
+    bins.to_csv(clean / f"{cfg['detector_id']}_bins_{width:g}s.csv", index=False)
     before, after = int((t < start).sum()), int((t >= stop).sum())
     assert int(counts.sum()) + before + after == len(d)
     assert int(coinc.sum()) + int(d.loc[t < start, "coincident"].sum()) + int(
@@ -171,7 +171,7 @@ def prepare(root, config, input_dir=None):
     fig, axes = plt.subplots(2, 2, figsize=(13, 8))
     shown = d.iloc[::max(1, len(d) // 5000)]
     axes[0, 0].scatter(shown.time_s / 60, shown.pressure_pa, s=2)
-    axes[0, 0].set(title="Top: own elapsed clock", xlabel="Minutes",
+    axes[0, 0].set(title=f"{cfg['detector_id'].capitalize()}: own elapsed clock", xlabel="Minutes",
                    ylabel="Pressure [Pa]")
     shown_l = l.iloc[::max(1, len(l) // 5000)]
     axes[0, 1].scatter(shown_l.timer_s_candidate / 60,
@@ -193,7 +193,7 @@ def prepare(root, config, input_dir=None):
         ax.grid(alpha=0.25)
     fig.suptitle("PRELIMINARY: phase, pressure and exposure assumptions unverified")
     fig.tight_layout()
-    fig.savefig(out / "top_profile_review.png", dpi=150)
+    fig.savefig(out / f"{cfg['detector_id']}_profile_review.png", dpi=150)
     plt.close(fig)
     print(f"Clean tables: {clean}")
     print(f"Review outputs: {out}")

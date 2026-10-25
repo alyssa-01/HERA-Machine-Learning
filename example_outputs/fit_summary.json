@@ -1,0 +1,176 @@
+{
+  "status": "exploratory fit; not scientifically validated",
+  "flight_id": "2025-06-01",
+  "detector_id": "bottom",
+  "channel": "all",
+  "exposure": "elapsed",
+  "model": "Poisson GAM: log(expected counts) = log(exposure) + spline(log(depth))",
+  "n_splines": 12,
+  "lambda_grid": [
+    0.01,
+    0.056234132519034905,
+    0.31622776601683794,
+    1.7782794100389228,
+    10.0,
+    56.23413251903491,
+    316.2277660168379,
+    1778.2794100389228,
+    10000.0
+  ],
+  "smoothing_selection": "in-sample UBRE",
+  "include_flagged_pressure_bins": false,
+  "input_csv": "/workspace/scratch/a152d492e111/outputs/june1_profile/clean/2025-06-01/20261025T040116312469Z/bottom_bins_10s.csv",
+  "input_sha256": "6d2cdb867801d8a25b0ed7fc68d36ce532ec458358499aa56768c1c4b2b8d9ac",
+  "script_sha256": "2ffce80caeedf90540a56599eb532ca812b8121a99f4a2c8283c625d9470751b",
+  "input_rows": 1918,
+  "input_training_ready_false": 1918,
+  "selection_counts": {
+    "outside_ascent_descent": 1120,
+    "included": 798
+  },
+  "versions": {
+    "python": "3.12.14",
+    "pygam": "0.12.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.8"
+  },
+  "phases": {
+    "ascent": {
+      "bins": 609,
+      "events": 148653,
+      "exposure_seconds": 6090.0,
+      "depth_range_g_cm2": [
+        11.747130773505733,
+        996.9561471042608
+      ],
+      "selected_lambda": 0.01,
+      "smoothing_scores": [
+        {
+          "lambda": 0.01,
+          "UBRE": 3.1378579431690823
+        },
+        {
+          "lambda": 0.056234132519034905,
+          "UBRE": 3.1379752941652876
+        },
+        {
+          "lambda": 0.31622776601683794,
+          "UBRE": 3.1441388460484423
+        },
+        {
+          "lambda": 1.7782794100389228,
+          "UBRE": 3.172608477593312
+        },
+        {
+          "lambda": 10.0,
+          "UBRE": 3.194339660530204
+        },
+        {
+          "lambda": 56.23413251903491,
+          "UBRE": 3.2070113941606535
+        },
+        {
+          "lambda": 316.2277660168379,
+          "UBRE": 3.229956557163247
+        },
+        {
+          "lambda": 1778.2794100389228,
+          "UBRE": 3.4051984406967737
+        },
+        {
+          "lambda": 10000.0,
+          "UBRE": 4.688020844306601
+        }
+      ],
+      "effective_degrees_of_freedom": 11.982733772486409,
+      "fitted_total_counts": 148652.99999995972,
+      "in_sample_mean_poisson_deviance": 1.0827649143300648,
+      "in_sample_rate_mae_cps": 1.157844003131087,
+      "pearson_chi2_per_residual_df": 1.1054926322164296,
+      "fitted_maximum": {
+        "status": "interior_fitted_maximum",
+        "depth_g_cm2": 87.61871315943296,
+        "pressure_pa": 8592.460534049533,
+        "rate_cps": 39.912499813924306,
+        "bins_below_depth": 271,
+        "bins_above_depth": 338,
+        "peak_location_interval": null
+      }
+    },
+    "descent": {
+      "bins": 189,
+      "events": 33756,
+      "exposure_seconds": 1890.0,
+      "depth_range_g_cm2": [
+        11.726736449246172,
+        1019.909959058394
+      ],
+      "selected_lambda": 0.01,
+      "smoothing_scores": [
+        {
+          "lambda": 0.01,
+          "UBRE": 3.3029002063813957
+        },
+        {
+          "lambda": 0.056234132519034905,
+          "UBRE": 3.3059654904828286
+        },
+        {
+          "lambda": 0.31622776601683794,
+          "UBRE": 3.362040406280211
+        },
+        {
+          "lambda": 1.7782794100389228,
+          "UBRE": 3.5193791419090337
+        },
+        {
+          "lambda": 10.0,
+          "UBRE": 3.6477045287441596
+        },
+        {
+          "lambda": 56.23413251903491,
+          "UBRE": 3.8066055665997096
+        },
+        {
+          "lambda": 316.2277660168379,
+          "UBRE": 3.946128303967098
+        },
+        {
+          "lambda": 1778.2794100389228,
+          "UBRE": 4.551219258171108
+        },
+        {
+          "lambda": 10000.0,
+          "UBRE": 8.727829247325353
+        }
+      ],
+      "effective_degrees_of_freedom": 11.963471369232614,
+      "fitted_total_counts": 33755.99999995439,
+      "in_sample_mean_poisson_deviance": 1.1256635935038743,
+      "in_sample_rate_mae_cps": 0.8774711647925448,
+      "pearson_chi2_per_residual_df": 1.2176374486882382,
+      "fitted_maximum": {
+        "status": "interior_fitted_maximum",
+        "depth_g_cm2": 68.54896980061528,
+        "pressure_pa": 6722.357546952039,
+        "rate_cps": 39.50457084690152,
+        "bins_below_depth": 34,
+        "bins_above_depth": 155,
+        "peak_location_interval": null
+      }
+    }
+  },
+  "limitations": [
+    "Exposure assumes continuous acquisition; event gaps cannot verify it.",
+    "Candidate live time additionally assumes cumulative deadtime in seconds.",
+    "Flight phases, pressure calibration and detector response remain provisional.",
+    "No logger/APRS synchronization, altitude conversion or amplitude calibration.",
+    "Metrics are in-sample diagnostics, not accuracy on independent flights.",
+    "95% pointwise mean intervals condition on smoothing and Poisson independence.",
+    "Intervals exclude calibration/systematic error and peak-location uncertainty.",
+    "Large Pearson chi2 per residual df suggests extra variation or mean-model error.",
+    "Curve maxima are restricted to observed depth ranges; boundary maxima are unsupported peaks."
+  ]
+}

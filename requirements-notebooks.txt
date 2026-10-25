@@ -1,0 +1,7 @@
+# Notebook interface and the dependencies used by the existing HERA scripts.
+jupyterlab>=4,<5
+ipykernel>=6,<8
+pygam==0.12.0
+numpy
+pandas
+matplotlib
