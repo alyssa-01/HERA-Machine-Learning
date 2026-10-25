@@ -6,3 +6,4 @@ numpy
 matplotlib
 scikit-learn
 pygam
+pygam==0.12.0
