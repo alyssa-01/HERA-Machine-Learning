@@ -1,0 +1,5 @@
+device,rows,first_event,last_event,first_timer_s,last_timer_s,recorded_span_hours,backward_timer_steps,maximum_interevent_gap_s,flagged_coincidence_events,coincidence_flag_status,initial_pressure_median_pa
+left,266662,1.0,266662.0,0.104704,42865.364789,11.907016690277779,0,6.862358999999742,0.0,all_zero_interpretation_unverified,98544.0
+middle,265562,1.0,265562.0,0.125138,42860.864649,11.905760975277778,0,5.079771000000619,0.0,all_zero_interpretation_unverified,97669.0
+right,247186,1.0,247186.0,1.390712,42865.475591,11.906690244166667,0,6.14390800000001,0.0,all_zero_interpretation_unverified,98511.0
+logger,92791,,,7.350585,42769.904296,11.878487141944445,9,,,,

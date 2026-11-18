@@ -1,0 +1,3 @@
+device,training_windows,validation_windows,supported_validation_windows,constant_offset_validation_mae_ms,affine_validation_mae_ms,affine_validation_max_abs_error_ms,metric_definition
+middle,6,6,6,36.753903505164914,3.1688482013678225,9.730497684366956,Error in locally estimated lag at held-out window centers; not particle matching accuracy.
+right,6,6,6,8.292522367176113,4.071328214217414,12.946173227989078,Error in locally estimated lag at held-out window centers; not particle matching accuracy.

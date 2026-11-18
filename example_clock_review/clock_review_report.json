@@ -1,0 +1,124 @@
+{
+  "status": "complete_diagnostic_review_no_synchronization_performed",
+  "run_id": "2026-05-31",
+  "input_files": [
+    {
+      "device": "left",
+      "path": "/workspace/scratch/a152d492e111/upload/left_AxLab_M_038.txt",
+      "sha256": "c883a2d270b71aaff240d34452a1cc487aee3866e95cbd1c23479d742945d692",
+      "size_bytes": 13498733
+    },
+    {
+      "device": "middle",
+      "path": "/workspace/scratch/a152d492e111/upload/middle_AxLab_M_037 copy.txt",
+      "sha256": "6e722c3df576e93ed36fff645fb07b71d7d91087d54869ee37562714056c3676",
+      "size_bytes": 13466237
+    },
+    {
+      "device": "right",
+      "path": "/workspace/scratch/a152d492e111/upload/right_AxLab_M_038 copy.txt",
+      "sha256": "cd78ab983346aed0580050404e305ec45c323c7d27749a6a26260ec792e89af7",
+      "size_bytes": 12514277
+    },
+    {
+      "device": "logger",
+      "path": "/workspace/scratch/a152d492e111/upload/AHD011 copy.csv",
+      "sha256": "0f31086f97b9e6e3f0760d3351baef40174867f35003eb52a36dc4a38c1b772f",
+      "size_bytes": 16231799
+    }
+  ],
+  "bin_seconds": 10.0,
+  "logger_counter_columns": [
+    "Events CW1&2",
+    "Events CW1&2&3"
+  ],
+  "rollover_seconds_candidate": 4294.967296,
+  "rollover_max_gap_seconds_candidate": 30.0,
+  "logger_rollover_candidates": [
+    {
+      "source_record": 4125,
+      "source_csv_row": 4126,
+      "before_timer_s": 4294.686523,
+      "after_timer_s": 0.811024,
+      "candidate_gap_s": 1.0917969999991328
+    },
+    {
+      "source_record": 78527,
+      "source_csv_row": 78528,
+      "before_timer_s": 4293.574696,
+      "after_timer_s": 0.392556,
+      "candidate_gap_s": 1.7851559999999154
+    },
+    {
+      "source_record": 80756,
+      "source_csv_row": 80757,
+      "before_timer_s": 4292.105447,
+      "after_timer_s": 0.327604,
+      "candidate_gap_s": 3.1894529999999577
+    },
+    {
+      "source_record": 82660,
+      "source_csv_row": 82661,
+      "before_timer_s": 4293.285612,
+      "after_timer_s": 6.894487,
+      "candidate_gap_s": 8.576170999999704
+    },
+    {
+      "source_record": 84410,
+      "source_csv_row": 84411,
+      "before_timer_s": 4293.234331,
+      "after_timer_s": 0.392035,
+      "candidate_gap_s": 2.125
+    },
+    {
+      "source_record": 86174,
+      "source_csv_row": 86175,
+      "before_timer_s": 4289.255316,
+      "after_timer_s": 9.097591,
+      "candidate_gap_s": 14.809570999999778
+    },
+    {
+      "source_record": 87859,
+      "source_csv_row": 87860,
+      "before_timer_s": 4291.171809,
+      "after_timer_s": 4.203537,
+      "candidate_gap_s": 7.999023999999736
+    },
+    {
+      "source_record": 89617,
+      "source_csv_row": 89618,
+      "before_timer_s": 4293.610763,
+      "after_timer_s": 0.423741,
+      "candidate_gap_s": 1.7802739999997357
+    },
+    {
+      "source_record": 91264,
+      "source_csv_row": 91265,
+      "before_timer_s": 4294.746007,
+      "after_timer_s": 0.655664,
+      "candidate_gap_s": 0.8769529999999577
+    }
+  ],
+  "datetime_review": {
+    "available": true,
+    "unparsed_datetimes": 0,
+    "backward_datetime_steps": 3274,
+    "large_backward_jumps_possible_stale_date": 1,
+    "distinct_recorded_dates": 1,
+    "timezone_verified": false
+  },
+  "clock_corrections_applied": false,
+  "utc_verified": false,
+  "source_hashes_unchanged": true,
+  "limitations": [
+    "No clock drift model, event matching or calibration is performed.",
+    "Timer period and rollover gap limit are candidate assumptions, not verified firmware properties.",
+    "A continuous candidate timer does not prove the logger kept accurate time.",
+    "Constant pressure/rate on the ground is not sufficient to identify clock drift.",
+    "Rates assume continuous acquisition inside complete native-clock bins; logging pauses are unverified.",
+    "Logger counter increments are placed at the later row; increments >1 lack individual event timestamps.",
+    "Zero coincidence flags are uninformative until firmware/wiring behavior is verified.",
+    "Raw dates/timezones are not repaired or interpreted as UTC.",
+    "Stable event numbers do not prove absence of unrecorded physical hits."
+  ]
+}

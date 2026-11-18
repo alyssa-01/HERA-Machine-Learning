@@ -1,0 +1,183 @@
+{
+  "detectors": {
+    "top": {
+      "rows": 3909912,
+      "finite": true,
+      "event_id_discontinuities": 0,
+      "time_nonincreasing_steps": 0,
+      "first_time_s": 0.231435,
+      "last_time_s": 697456.731879,
+      "time_differences_s": {
+        "min": 0.00024599998141638935,
+        "p01": 0.002074999996693805,
+        "p50": 0.12387899996247143,
+        "p99": 0.8190419999940777,
+        "max": 3.5098049999796785
+      },
+      "zero_coincidence_flags": true,
+      "deadtime_backwards_steps": 0,
+      "deadtime_first_last": [
+        6.4e-05,
+        1003.917843
+      ],
+      "pressure_pa": {
+        "min": 99670.0,
+        "p01": 99709.0,
+        "p50": 100717.0,
+        "p99": 101982.0,
+        "max": 101997.0
+      },
+      "temperature_c": {
+        "min": 26.0,
+        "p01": 31.8,
+        "p50": 32.5,
+        "p99": 33.1,
+        "max": 33.1
+      }
+    },
+    "mid": {
+      "rows": 4085008,
+      "finite": true,
+      "event_id_discontinuities": 0,
+      "time_nonincreasing_steps": 0,
+      "first_time_s": 0.012712,
+      "last_time_s": 697456.566498,
+      "time_differences_s": {
+        "min": 0.00026300002355128527,
+        "p01": 0.0020069999959378038,
+        "p50": 0.1186030000098981,
+        "p99": 0.7846788799765635,
+        "max": 2.402998999983538
+      },
+      "zero_coincidence_flags": true,
+      "deadtime_backwards_steps": 0,
+      "deadtime_first_last": [
+        6.4e-05,
+        1047.987467
+      ],
+      "pressure_pa": {
+        "min": 98760.0,
+        "p01": 98803.0,
+        "p50": 99786.0,
+        "p99": 101028.0,
+        "max": 101046.0
+      },
+      "temperature_c": {
+        "min": 26.1,
+        "p01": 32.8,
+        "p50": 33.4,
+        "p99": 34.1,
+        "max": 34.1
+      }
+    },
+    "bot": {
+      "rows": 3678007,
+      "finite": true,
+      "event_id_discontinuities": 0,
+      "time_nonincreasing_steps": 0,
+      "first_time_s": 0.074314,
+      "last_time_s": 697458.814682,
+      "time_differences_s": {
+        "min": 0.00024900000425986946,
+        "p01": 0.0022040000185370445,
+        "p50": 0.13170599999284605,
+        "p99": 0.8707189499982635,
+        "max": 2.7063280000002123
+      },
+      "zero_coincidence_flags": true,
+      "deadtime_backwards_steps": 0,
+      "deadtime_first_last": [
+        6.4e-05,
+        944.671381
+      ],
+      "pressure_pa": {
+        "min": 99604.0,
+        "p01": 99643.0,
+        "p50": 100651.0,
+        "p99": 101918.0,
+        "max": 101946.0
+      },
+      "temperature_c": {
+        "min": 25.9,
+        "p01": 31.4,
+        "p50": 32.0,
+        "p99": 32.7,
+        "max": 32.8
+      }
+    }
+  },
+  "logger": {
+    "rows": 1215921,
+    "dates": {
+      "8/10/2026": 1215921
+    },
+    "first_rtc": "21:6:58.834",
+    "last_rtc": "13:55:01.792",
+    "first_last_counters": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        819948.0,
+        395973.0
+      ]
+    ],
+    "backwards_counter_steps": 0,
+    "counter_increment_row_patterns": {
+      "(1.0, 0.0)": 819947,
+      "(0.0, 1.0)": 395973
+    },
+    "counter_increments_gt_1": 0,
+    "rollover_candidates": 14,
+    "raw_timer_step_s": {
+      "min": -4294.939953,
+      "p01": 0.01953100000000063,
+      "p50": 0.03515600000037011,
+      "p99": 0.2021479999998519,
+      "max": 1.115233999999873
+    },
+    "candidate_timer_step_s": {
+      "min": 0.009764999999999802,
+      "p01": 0.019530999999915366,
+      "p50": 0.035156000005372334,
+      "p99": 0.2021479999998519,
+      "max": 1.1152339999971446
+    },
+    "candidate_timer_span_hours": 16.79507486972222,
+    "rtc_signed_daily_unwrap_span_hours_candidate": 16.800821666657022,
+    "rtc_large_negative_steps": 2,
+    "rtc_large_positive_steps": 1,
+    "rtc_small_backward_steps": 50268,
+    "rtc_vs_timer_slope": 1.0018740192607216,
+    "rtc_vs_timer_intercept_s": -50.9444347435071,
+    "rtc_vs_timer_residual_s": {
+      "min": -63.56391209141657,
+      "p01": -58.118995182122674,
+      "p50": 0.2754478839087824,
+      "p99": 56.14764591499407,
+      "max": 61.271181339994655
+    },
+    "rtc_minus_timer_without_fit_s": {
+      "min": -108.48518000000081,
+      "p01": -93.5361593999991,
+      "p50": 4.301516000003964,
+      "p99": 105.82007476528962,
+      "max": 122.21374996528903
+    },
+    "pressure_pa": {
+      "min": 101096.84,
+      "p01": 101111.19,
+      "p50": 101230.19,
+      "p99": 101368.508,
+      "max": 101382.47
+    },
+    "temperature_c": {
+      "min": 29.83,
+      "p01": 29.95,
+      "p50": 32.37,
+      "p99": 34.73,
+      "max": 34.78
+    }
+  }
+}

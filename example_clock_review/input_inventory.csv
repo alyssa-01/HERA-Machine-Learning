@@ -1,0 +1,5 @@
+device,path,sha256,size_bytes
+left,/workspace/scratch/a152d492e111/upload/left_AxLab_M_038.txt,c883a2d270b71aaff240d34452a1cc487aee3866e95cbd1c23479d742945d692,13498733
+middle,/workspace/scratch/a152d492e111/upload/middle_AxLab_M_037 copy.txt,6e722c3df576e93ed36fff645fb07b71d7d91087d54869ee37562714056c3676,13466237
+right,/workspace/scratch/a152d492e111/upload/right_AxLab_M_038 copy.txt,cd78ab983346aed0580050404e305ec45c323c7d27749a6a26260ec792e89af7,12514277
+logger,/workspace/scratch/a152d492e111/upload/AHD011 copy.csv,0f31086f97b9e6e3f0760d3351baef40174867f35003eb52a36dc4a38c1b772f,16231799

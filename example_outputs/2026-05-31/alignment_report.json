@@ -1,0 +1,145 @@
+{
+  "status": "exploratory_candidate_clock_models_no_source_rewriting",
+  "alignment_script_sha256": "51a5ac9a3c50da7c838a26745178d6c3e5fc96869d3d4405d149bf77c212dd78",
+  "run_id": "2026-05-31",
+  "reference_id": "left",
+  "settings": {
+    "window_seconds": 1200.0,
+    "search_seconds": 120.0,
+    "coarse_bin_seconds": 0.01,
+    "local_pair_band_seconds": 0.01,
+    "maximum_search_adjusted_poisson_tail_screen": 0.001,
+    "train_centers_s": [
+      1800.0,
+      9000.0,
+      16200.0,
+      23400.0,
+      30600.0,
+      37800.0
+    ],
+    "validation_centers_s": [
+      5400.0,
+      12600.0,
+      19800.0,
+      27000.0,
+      34200.0,
+      41400.0
+    ]
+  },
+  "inputs": {
+    "left": {
+      "rows": 266662,
+      "first_time_s": 0.104704,
+      "last_time_s": 42865.364789,
+      "native_span_hours": 11.907016690277779,
+      "coincidence_flagged_rows": 0,
+      "filename": "left_AxLab_M_038.txt",
+      "sha256": "c883a2d270b71aaff240d34452a1cc487aee3866e95cbd1c23479d742945d692"
+    },
+    "middle": {
+      "rows": 265562,
+      "first_time_s": 0.125138,
+      "last_time_s": 42860.864649,
+      "native_span_hours": 11.905760975277778,
+      "coincidence_flagged_rows": 0,
+      "filename": "middle_AxLab_M_037 copy.txt",
+      "sha256": "6e722c3df576e93ed36fff645fb07b71d7d91087d54869ee37562714056c3676"
+    },
+    "right": {
+      "rows": 247186,
+      "first_time_s": 1.390712,
+      "last_time_s": 42865.475591,
+      "native_span_hours": 11.906690244166667,
+      "coincidence_flagged_rows": 0,
+      "filename": "right_AxLab_M_038 copy.txt",
+      "sha256": "cd78ab983346aed0580050404e305ec45c323c7d27749a6a26260ec792e89af7"
+    }
+  },
+  "models": {
+    "middle": {
+      "status": "candidate_relative_clock_map",
+      "equation": "other_time = offset_s + (1 + drift) * reference_time",
+      "inverse_equation": "reference_time_candidate = (other_time - offset_s) / (1 + drift)",
+      "offset_s": 0.10798701782962765,
+      "drift": 3.3294513668179476e-06,
+      "relative_drift_ppm": 3.3294513668179477,
+      "inverse_a_s": -0.10798665829330059,
+      "inverse_b": 0.9999966705597184,
+      "training_center_domain_reference_s": [
+        1800.0,
+        37800.0
+      ]
+    },
+    "right": {
+      "status": "candidate_relative_clock_map",
+      "equation": "other_time = offset_s + (1 + drift) * reference_time",
+      "inverse_equation": "reference_time_candidate = (other_time - offset_s) / (1 + drift)",
+      "offset_s": -0.08888701307999262,
+      "drift": 6.804542623919024e-07,
+      "relative_drift_ppm": 0.6804542623919024,
+      "inverse_a_s": 0.08888695259648685,
+      "inverse_b": 0.9999993195462005,
+      "training_center_domain_reference_s": [
+        1800.0,
+        37800.0
+      ]
+    }
+  },
+  "metrics": {
+    "middle": {
+      "training_windows": 6,
+      "validation_windows": 6,
+      "supported_validation_windows": 6,
+      "constant_offset_validation_mae_ms": 36.753903505164914,
+      "affine_validation_mae_ms": 3.1688482013678225,
+      "affine_validation_max_abs_error_ms": 9.730497684366956,
+      "metric_definition": "Error in locally estimated lag at held-out window centers; not particle matching accuracy."
+    },
+    "right": {
+      "training_windows": 6,
+      "validation_windows": 6,
+      "supported_validation_windows": 6,
+      "constant_offset_validation_mae_ms": 8.292522367176113,
+      "affine_validation_mae_ms": 4.071328214217414,
+      "affine_validation_max_abs_error_ms": 12.946173227989078,
+      "metric_definition": "Error in locally estimated lag at held-out window centers; not particle matching accuracy."
+    }
+  },
+  "logger_audit": {
+    "filename": "AHD011 copy.csv",
+    "sha256": "0f31086f97b9e6e3f0760d3351baef40174867f35003eb52a36dc4a38c1b772f",
+    "rows": 92791,
+    "status": "recording_coverage_unresolved_not_aligned",
+    "rollover_period_s_candidate": 4294.967296,
+    "rollover_candidates": 9,
+    "timer_span_hours_candidate": 11.878487141944445,
+    "rtc_daily_unwrap_span_hours_candidate": 11.906856388888722,
+    "recorded_dates": {
+      "5/31/2026": 92791
+    },
+    "rtc_backward_steps": 3274,
+    "rtc_signed_midnight_crossings": 1,
+    "utc_verified": false,
+    "correction_applied": false
+  },
+  "source_hashes_unchanged": true,
+  "utc_verified": false,
+  "raw_timestamps_rewritten": false,
+  "particle_identities_verified": false,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0"
+  },
+  "limitations": [
+    "Reference clock is arbitrary; absolute duration and UTC accuracy are unverified.",
+    "Event-pair timing excesses do not prove particle identity or detector wiring.",
+    "Validation errors measure predicted local lag, not individual-event timing precision.",
+    "Sampled windows do not certify every intervening instant or extrapolated edges.",
+    "Affine residual structure may require more local corrections for tighter timing.",
+    "Clock parameters apply only to this recording; do not transfer them to another run.",
+    "Logger recording coverage is unresolved and no logger alignment is fitted.",
+    "Calibration, pressure corrections, deadtime interpretation, and flight phases are unchanged."
+  ]
+}

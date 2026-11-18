@@ -1,0 +1,140 @@
+{
+  "status": "candidate_local_clock_maps_no_raw_rewriting",
+  "run_id": "2026-05-31",
+  "reference_id": "left",
+  "refinement_script_sha256": "8fb2d1110b7fd3ea881efc51649c72eda60f9e70d16742de66ebb67e498da173",
+  "baseline_alignment_script_sha256": "51a5ac9a3c50da7c838a26745178d6c3e5fc96869d3d4405d149bf77c212dd78",
+  "baseline_alignment_folder": "/workspace/scratch/a152d492e111/tmp/clock_refinement_test/results/2026-05-31/20261116T060758899275Z_clock_alignment",
+  "baseline_report_sha256": "3da5207664fd340eb858459dee158a2cb1239432bcb07272373bba1ab059c99b",
+  "baseline_lags_sha256": "9fd972046ef72db5967f4e40d8869d3e65f8353c36dcb8fd21d9a32ae5db8dc4",
+  "source_sha256": {
+    "left": "c883a2d270b71aaff240d34452a1cc487aee3866e95cbd1c23479d742945d692",
+    "middle": "6e722c3df576e93ed36fff645fb07b71d7d91087d54869ee37562714056c3676",
+    "right": "cd78ab983346aed0580050404e305ec45c323c7d27749a6a26260ec792e89af7"
+  },
+  "source_hashes_unchanged": true,
+  "models": {
+    "middle": {
+      "status": "candidate_relative_piecewise_linear_map",
+      "reference_anchor_seconds": [
+        1800.0,
+        9000.0,
+        16200.0,
+        23400.0,
+        30600.0,
+        37800.0
+      ],
+      "device_anchor_seconds": [
+        1800.1179066357379,
+        9000.139865322277,
+        16200.161924129972,
+        23400.185896179813,
+        30600.21054758792,
+        37800.238259852675
+      ],
+      "lag_anchor_seconds": [
+        0.1179066357378418,
+        0.139865322277001,
+        0.1619241299720784,
+        0.1858961798131676,
+        0.210547587921673,
+        0.2382598526760828
+      ],
+      "extrapolation_allowed": false
+    },
+    "right": {
+      "status": "candidate_relative_piecewise_linear_map",
+      "reference_anchor_seconds": [
+        1800.0,
+        9000.0,
+        16200.0,
+        23400.0,
+        30600.0,
+        37800.0
+      ],
+      "device_anchor_seconds": [
+        1799.9170097201586,
+        8999.921993567197,
+        16199.922384018759,
+        23399.92678794387,
+        30599.932182560136,
+        37799.94256907895
+      ],
+      "lag_anchor_seconds": [
+        -0.082990279841504,
+        -0.0780064328026639,
+        -0.0776159812409794,
+        -0.0732120561282864,
+        -0.067817439862536,
+        -0.0574309210526338
+      ],
+      "extrapolation_allowed": false
+    }
+  },
+  "metrics": [
+    {
+      "device": "middle",
+      "fresh_windows": 6,
+      "supported_fresh_windows": 6,
+      "all_fresh_signals_supported": true,
+      "affine_fresh_mae_ms": 2.277525403040113,
+      "local_fresh_mae_ms": 1.124151830555739,
+      "local_fresh_max_abs_error_ms": 2.9316547126718993
+    },
+    {
+      "device": "right",
+      "fresh_windows": 6,
+      "supported_fresh_windows": 6,
+      "all_fresh_signals_supported": true,
+      "affine_fresh_mae_ms": 2.982283807118941,
+      "local_fresh_mae_ms": 1.2210258630741313,
+      "local_fresh_max_abs_error_ms": 2.515174300135467
+    }
+  ],
+  "mapping_coverage": {
+    "left": {
+      "source_events": 266662,
+      "events_inside_anchor_span": 248384,
+      "events_outside_anchor_span": 18278,
+      "outside_events_preserved_in_original": true
+    },
+    "middle": {
+      "source_events": 265562,
+      "events_inside_anchor_span": 246786,
+      "events_outside_anchor_span": 18776,
+      "outside_events_preserved_in_original": true
+    },
+    "right": {
+      "source_events": 247186,
+      "events_inside_anchor_span": 230410,
+      "events_outside_anchor_span": 16776,
+      "outside_events_preserved_in_original": true
+    }
+  },
+  "fresh_centers_s": [
+    3600.0,
+    7200.0,
+    10800.0,
+    18000.0,
+    25200.0,
+    32400.0
+  ],
+  "window_seconds": 1200.0,
+  "search_seconds": 120.0,
+  "models_use_04_training_anchors_only": true,
+  "fresh_windows_disjoint_from_04_scheduled_windows": true,
+  "logger_aligned": false,
+  "utc_verified": false,
+  "raw_timestamps_rewritten": false,
+  "particle_identities_verified": false,
+  "extrapolation_allowed": false,
+  "limitations": [
+    "Errors describe independently measured local timing-peak positions, not individual-event accuracy.",
+    "Anchor-span flags do not guarantee accuracy at every instant between sparse anchors.",
+    "Unmapped startup/tail events stay in original files; no extrapolated correction is supplied.",
+    "Fresh windows are within the same previously inspected recordings, not independent hardware truth.",
+    "Logger clocks and their recording coverage remain separate unresolved problems.",
+    "Instrument coincidence gates, calibration, firmware, and physical event identity remain unverified.",
+    "A candidate local map is valid only for its own recording and source hashes."
+  ]
+}

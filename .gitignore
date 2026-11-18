@@ -1,6 +1,7 @@
 # Local data and generated model outputs
 /data/
 /raw/
+/configs/
 /clean/
 /results/
 /models/
